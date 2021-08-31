@@ -6,7 +6,7 @@ In this lab we will create a MySQL DB system and add a heatewave cluster to it. 
 
  By enabling HeatWave you will deploy a standalone DB System characterized by a HeatWave-compatible shape (MySQL.HeatWave.VM.Standard.E3) and 1TB of data storage that will accelerate processing of analytic queries. For more information, check **[HeatWave Documentation](https://docs.oracle.com/en-us/iaas/mysql-database/doc/heatwave1.html#GUID-9401C69A-B379-48EB-B96C-56462C23E4FD)**. 
 
-Estimated Time: 20 minutes
+Estimated Lab Time: 15 minutes
 
 ### Objectives
 
@@ -35,15 +35,15 @@ Look at the compartment selector on the left and check that you are using the sa
 
 4. In the **Create Administrator Credential** section enter the following information:
   
-    ```
-    <copy>
-    username: admin
-    password: Oracle.123
-    </copy>
-    ```
-  In the **Configure Networking** section make sure you select the same subnet which you have used to create the Compute Instance **`Public-Subnet-analytics_vcn_test(Regional)`**.
+```
+username: <copy>admin</copy>
+```
+```
+password: <copy>Oracle.123</copy>
+```
+- In the _**Configure Networking**_ section make sure you select the same subnet which you have used to create the Compute Instance _**`Public-Subnet-analytics_vcn_test(Regional)`**_.
 
-  Leave the default availability domain and proceed to the **Configure Hardware** section.
+- Leave the default availability domain and proceed to the _**Configure Hardware**_ section.
  
     ![](./images/task1.4.png)
 

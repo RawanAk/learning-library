@@ -4,7 +4,7 @@
 
 In this lab we will build the infrastructure that we will use to run the rest of the workshop. The main three elements that we will be creating are a Virtual Cloud Network which helps you define your own data centre network topology inside the Oracle Cloud by defining some of the following components (Subnets, Route Tables, Security Lists, Gateways, etc.), bastion host which is a compute instance that serves as the public entry point for accessing a private network from external networks like the internet, and finally we will create an Oracle Analytics Cloud instance which is embedded with machine learning, that helps organizations to discover unique insights faster with automation and intelligence.
 
-Estimated Time: 30 minutes
+Estimated Lab Time: 35 minutes
 
 ### Objectives
  
@@ -116,26 +116,24 @@ To access cloud shell, click on the shell icon next to the name of the OCI regio
 
     ![](./images/task3.1.png)
 
-2. Once the cloud shell is opened, you will see the command line:
+
+- Once the cloud shell is opened, you will see the command line:
   
     ![](./images/task3.2.png)
 
-  We suggest to increase the font size:
-  
-    ![](./images/cloud-shell-3.png)
-
-  On the top left corner of the cloud shell there are Minimize, Maximize and Close buttons. If you Maximize the cloud shell it will take the size of the entire page. Remember to Restore the size or Minimize prior of changing page in the OCI interface.
-
-    ![](./images/cloud-shell-4.png)
-
-3. Drag and drop the previously saved private key into the cloud shell. You can get the file name with the command **ll**.
+### **Task 3.2:**
+- Drag and drop the previously saved private key into the cloud shell. You can verify the key file name with the following command:
+  ```
+  <copy>ll</copy>
+  ```
   
     ![](./images/task3.3.png)
 
     ![](./images/task3.3-1.png)
 
 
-4. Copy the **Public IP Address** of the compute instance you have just created.
+### **Task 3.3:**
+- Copy the _**Public IP Address**_ of the compute instance you have just created.
 
     ![](./images/task3.4.png)
 
@@ -157,81 +155,60 @@ To access cloud shell, click on the shell icon next to the name of the OCI regio
 
   _**Warning: Permanently added '130. . . ' (ECDSA) to the list of known hosts.**_
 
+Now that you have connected to the instance you can proceed to the next Task.
 
-6. From the established ssh connection, install MySQL Shell and MySQL client executing the following commands and the expected outputput should be as following:
-      
-    ```
-    <copy>wget https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm</copy>
-    ```
-    ![](./images/task3.5.png)
+### **Task 3.4:**
+- From the established ssh connection, install MySQL Shell and MySQL client executing the following commands and the expected outputput should be as following:
+  
+```
+<copy>wget https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm</copy>
+```
 
-    ```
-    <copy>sudo yum localinstall mysql80-community-release-el7-3.noarch.rpm</copy>
-    ```
-    ![](./images/task3.5-1.png)
+```
+<copy>sudo yum localinstall mysql80-community-release-el7-3.noarch.rpm</copy>
+```
 
-  When prompted a warning about the public key type "y"
+```
+<copy>sudo yum install mysql-shell</copy>  
+```
 
-    ```
-    <copy>sudo yum install mysql-shell</copy>  
-    ```
-    ![](./images/task3.5-2.png)
+```
+<copy>sudo yum install mysql-community-client</copy>
+```
+_**when prompted a warning about the public key type "y"**_
+![](./images/task3.5.png)
+![](./images/task3.5-1.png)
+![](./images/task3.5-2.png)
+![](./images/task3.5-3.png)
+### **Task 3.5:**
 
-  When prompted a warning about the public key type "y"
+- Check out the MySQL shell version
+```
+<copy>mysqlsh --version</copy>
+```
+![](images/task3.6-1.png)
 
-    ```
-    <copy>sudo yum install mysql-community-client</copy>
-    ```
-
-    ![](./images/task3.5-3.png)
-
-  When prompted a warning about the public key type "y"
-
-
-7. Launch MySQL Shell executing the following command:
-    ```
-    <copy>mysqlsh</copy>
-    ```
-  When you see the MySQL Shell colorful prompt, exit with the following command:
-    ```
-    <copy>
-    \q
-    </copy>
-    ```
-    ![](./images/task3.6.png)
+- Launch MySQL Shell executing the following command:
+```
+<copy>mysqlsh</copy>
+```
+![](./images/task3.6.png)
 
 
-8. Download and unzip the workshop material using the following commands:
-    ```
-    <copy>
-    cd /home/opc
-    </copy>
-    ```
+### **Task 3.6:**
+- Download the airportdb sample database that we will use for this workshop using the following commands:
+```
+<copy>
+cd /home/opc
+</copy>
+```
+_Note:_ It takes around 15-20 minutes to finish, you can proceed to the next Task until it is done downloading.
+```
+<copy>wget https://downloads.mysql.com/docs/airport-db.zip</copy>
+```
 
-    ```
-    <copy>wget https://objectstorage.eu-frankfurt-1.oraclecloud.com/p/Ufty1RlzG7jobFAsNTsyaEgDVBgSLfiPGcxLscTxVOUxDN8MX6Jswj85_Iw7_bS2/n/odca/b/workshops-livelabs-do-not-delete/o/heatwave_workshop.zip</copy>
-    ```
+![](./images/task3.7-2.png)
 
-    ![](./images/task3.7.png)
-
-    ```
-    <copy>unzip heatwave_workshop.zip</copy>
-    ```
-
-    ![](./images/task3.7-1.png)
-
-9. Verify the extracted material executing **ll** command.
-  Among the output, you should see the following file names:
-
-  **`tpch_dump`**
-
-  **`tpch_offload.sql`**
-
-  **`tpch_queries_mysql.sql`**
-
-  **`tpch_queries_rapid.sql`**
-
-    ![](./images/task3.8.png)
 
 ## Task 4: Create an Oracle Analytics Cloud instance
 
@@ -283,7 +260,7 @@ In this task we will create an Oracle Analytics Cloud instance before we proceed
 5. In the next window you first need to fill the name for the channel **PrivateChannel**. Then, choose the VCN created earlier **`analytics_vcn_test`**, and make sure you select the correct subnet, **`Public Subnet-analytics_vcn_test`**, otherwise you won't be able to connect!
 Check **Virtual Cloud Network's domain name as DNS zone**, and remove the additional **DNS Zone**, using the X icon on the right side of the DNS Zone section, and finally click **Configure**.  
 
-  _**Note:** It will take up to **50 minutes** to create the private channel so go get a nice cup of tea to kill the time!_
+_**Note:**_ It will take up to _**50 minutes**_ to create the private channel so go ahead and proceed to the next Lab! 
 
     ![](./images/task4.5.png)
 
