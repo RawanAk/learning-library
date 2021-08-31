@@ -23,7 +23,14 @@ Estimated Time: 30 minutes
     ```
     ![](./images/task1.1.png)
 
-2. Run the following query to create a virtual table **myAnalyticsView** that will include data from other tables from the database:
+- From the Cloud shell connect to MySQL DB System:
+  
+```
+<copy>mysqlsh --user=admin --password=Oracle.123 --host=<mysql_private_ip_address> --port=3306 --database=airportdb --sql</copy>
+```
+![](./images/task1.1.png)
+
+- Run the following query to create a virtual table _**myAnalyticsView**_ that will include data from other tables from the database:
 
     ```
     <copy>
