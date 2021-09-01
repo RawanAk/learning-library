@@ -130,8 +130,7 @@ Click on the _**airportdb**_ database in the left side of the dashboard.
 
     ![](./images/RW9.PNG)
 
-    ![](./images/RW10.PNG)
- Save the Data Set on the top left corner of the page where you can see Untitled Dat Set. Call it **`view_analytics`** and then click **OK**.
+ Save the Data Set by click on the disk icon on the top right corner of the page, Call it **`view_analytics`** and then click **OK**.
 
  5. Save the Data Set on the top left corner of the page where you can see Untitled Dat Set. Call it **myAnalyticsView** and then click **OK**.
 
@@ -157,7 +156,7 @@ Click on the _**airportdb**_ database in the left side of the dashboard.
 
     ![](./images/RW12.PNG)
 
- A Bar Chart will appear after few seconds and we will see how every country contributes approximately equally to the company's revenues.
+ A Bar Chart will appear after few seconds and we will see the distribution of the passengers over countries. 
 
     ![](./images/RW13.PNG)
 
@@ -173,29 +172,29 @@ Click on the _**airportdb**_ database in the left side of the dashboard.
 
     ![](./images/task2.5.png)
 
- Our new map appears on the screen. Now let’s analyze the trend of prices by time. On the Explorer pane on the left, expand the column **`Month the Year`**, 
- 
- then click on Year, hold CTRL and click on **`price`**. Right-click and choose _**Create Best Visualization**_.
+ Our new map appears on the screen. Now let’s analyze the trend of prices by time. On the Explorer pane on the left, expand the column **`Month the Year`**, then click on Year, hold CTRL and click on **`price`**. Right-click and choose _**Create Best Visualization**_.
 
     ![](./images/maps3.png)
 
-13. A line chart will be created at the bottom. We see the historical trend and a drop in the latest year. It would be awesome to know if this drop was a one off, and the embedded Machine Learning within OAC can help you predict the future behavior. Right-click on the Line graphic and go to **Add Statistics --> Forecast**. 
+![](./images/maps3-2.png)
+
+ A line chart will be created at the bottom. We see the historical trend and a drop in the latest year. It would be awesome to know if this drop was a one off, and the embedded Machine Learning within OAC can help you predict the future behavior. Right-click on the Line graphic and go to **Add Statistics --> Forecast**. 
 
     ![](images/maps4.png)
 
-  The visual now shows the forecasted **`O_TOTALPRICE`** based on the Machine Learning applied to the data from the MySQL database. 
-  It looks like we will recover from this drop.
+ The visual now shows the forecasted **`price`** based on the Machine Learning applied to the data from the MySQL database. 
+ It looks like we will recover from this drop.
 
     ![](./images/maps5.png)
 
-14. Finally, save the project by clicking on the Disk icon at the top right of the screen. Give it a name like **Company’s Revenue**.
+ Finally, save the project by clicking on the Disk icon at the top right of the screen. Give it a name like **Departure Flights Revenue**.
 
     ![](./images/task2.5-1.png)
 
   You can see the name of the Project on the top left corner of the dashboard.
 
 ![](./images/task2.5-2.png)
-![](./images/new.png)
+
 
   You can also share your project by email or social media. Have a look at the possibilities.
 
