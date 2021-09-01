@@ -64,12 +64,17 @@ Estimated Lab Time: 35 minutes
 
     ![](./images/task1.10.png)
 
-11. Add the necessary rule to the default security list to enable traffic through MySQL Database Service port. 
-
-  Insert the details as below:
-    -  Source CIDR  **0.0.0.0/0**
-    -  Port **3306**
-    -  Description  **MySQL Port**
+Insert the details as below:
+```  
+Source CIDR:  <copy> 0.0.0.0/0 </copy>
+```
+```  
+Destination Port Range: <copy> 3306 </copy>
+```
+```  
+Description:  <copy> MySQL Port </copy>
+```
+At the end click the blue button _**Add Ingress Rules**_.
 
   At the end click the blue button **Add Ingress Rules**.
 
