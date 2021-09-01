@@ -29,7 +29,12 @@ Look at the compartment selector on the left and check that you are using the sa
 
     ![](./images/task1.2.png)
 
-3. Start creating the DB System. Cross check again the compartment and assign to the DB System the name **mysql-analytics-test** and select the HeatWave box. This will allow to create a MySQL DB System which will be HeatWave-ready. Ignore other boxes.
+### **Task 1.3:**
+- Start creating the DB System. Cross check again the compartment and assign to the DB System the name:
+```
+<copy> mysql-analytics-test</copy>
+```
+ Select the HeatWave box, this will allow to create a MySQL DB System which will be HeatWave-ready. 
   
     ![](./images/task1.3.png)
 
@@ -41,7 +46,7 @@ username: <copy>admin</copy>
 ```
 password: <copy>Oracle.123</copy>
 ```
-- In the _**Configure Networking**_ section make sure you select the same subnet which you have used to create the Compute Instance _**`Public-Subnet-analytics_vcn_test(Regional)`**_.
+- In the _**Configure Networking**_ section make sure you select the same VCN and subnet which you have used to create the Compute Instance _**`Public-Subnet-analytics_vcn_test(Regional)`**_.
 
 - Leave the default availability domain and proceed to the _**Configure Hardware**_ section.
  
@@ -69,12 +74,21 @@ password: <copy>Oracle.123</copy>
 
     ![](./images/task1.7-1.png)
 
-8. Go to the Networking tab, in the Hostname field enter **mysql-analytics-test** (same as DB System Name). Check that port configuration corresponds to the following:
+### **Task 1.8:**
+- Go to the Networking tab, in the Hostname field enter (same as DB System Name):
+```
+<copy> mysql-analytics-test</copy> 
+```
+Check that port configuration corresponds to the following:
 
-    - MySQL Port: **3306**
-    - MySQL X Protocol Port: **33060**
-      
-  Once done, click the **Create** button.
+
+MySQL Port: **3306**
+
+MySQL X Protocol Port: **33060**
+
+ 
+
+Once done, click the _**Create**_ button.
 
     ![](./images/task1.8.png)
 

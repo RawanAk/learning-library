@@ -53,17 +53,19 @@ Among the output, you should see the following file names:
 
 ### **Task 1.2:**
 
-- From the MySQL Shell connection, import the data set into MySQL DB System:
+- From the MySQL Shell connection, import the data set into MySQL DB System.
+This command will commit a dry run of the import.
+
 ```
 <copy>util.loadDump("/home/opc/airport-db", {dryRun: true, resetProgress:true, ignoreVersion:true})</copy>
 ```
 ![](./images/task1.2.png)
 
-This command will commit a dry run of the import. If it terminates without errors, execute the following to load the dump for real:
+ If it terminates without errors, execute the following to load the dump for real:
 ```
 <copy>util.loadDump("/home/opc/airport-db", {dryRun: false, resetProgress:true, ignoreVersion:true})</copy>
 ```
-_Note:_ It takes around 6 minutes to finish.
+_Note:_ It takes around 5 minutes to finish.
 ![](./images/task1.2-1.png)
 
 ### **Task 1.3:**

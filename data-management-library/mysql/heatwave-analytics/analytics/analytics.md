@@ -30,16 +30,29 @@ Estimated Time: 30 minutes
 ```
 ![](./images/task1.1.png)
 
-- Run the following query to create a virtual table _**myAnalyticsView**_ that will include data from other tables from the database:
+- Run the following query to create a virtual table **`view_analytics`** that will include data from other tables from the database:
 
-    ```
-    <copy>
-    CREATE VIEW myAnalyticsView AS SELECT * 
-        FROM customer JOIN orders ON customer.C_CUSTKEY=orders.O_CUSTKEY
-        JOIN nation ON customer.C_NATIONKEY=nation.N_NATIONKEY;
-    </copy>    
-    ```
-    ![](./images/task1.1-1.png)
+```
+<copy>
+CREATE VIEW view_analytics AS
+SELECT b.booking_id,
+  f.flight_id,
+  pd.passenger_id,
+  pd.sex,
+  pd.country,
+  b.seat,
+  b.price,
+  f.flightno,
+  f.departure,
+  f.arrival
+FROM booking b
+  JOIN passengerdetails pd ON pd.passenger_id = b.passenger_id
+  JOIN flight f ON f.flight_id = b.flight_id
+  JOIN airport ato ON ato.airport_id = f.to
+  LIMIT 200000;
+</copy>    
+```
+![](./images/task1.1-1.png)
 
 3. Now going back to the main page click on the **hamburger menu** in the upper left corner and click on **Analytics & AI -> Analytics Cloud**.
 
@@ -53,11 +66,9 @@ Estimated Time: 30 minutes
 
     ![](./images/task1.3.png)
 
-6. On the top right corner click **Create**.
-  
-    ![](./images/RW1.PNG)
+  ![](./images/task1.3.png)
 
-7. Then click **Connection**.
+- On the top right corner click _**Create**_, then click _**Connection**_.
   
     ![](./images/RW2.PNG)
 
@@ -80,8 +91,8 @@ Estimated Time: 30 minutes
 
     - **Port**: Copy the information from MySQL Port. It should be 3306.
 
-    - **Database Name**: tpch
-
+    - **Database Name**: _airportdb_
+  
     - **Username**: admin
 
     - **Password**: Oracle.123
@@ -103,6 +114,7 @@ Your Oracle Analytics Instance is now connected to your MySQL Database Service p
 2. From the new window select the connection we just created **MySQL_Connection.**
 
     ![](./images/RW6.PNG)
+Click on the _**airportdb**_ database in the left side of the dashboard.
 
 3. Click on the **tpch** database in the left side of the dashboard.
 
@@ -111,16 +123,20 @@ Your Oracle Analytics Instance is now connected to your MySQL Database Service p
   **NOTE**: As a general note, keep in mind that you can use the Undo/Redo buttons at the top right of the screen if you make any mistake in this section.
 
     ![](./images/RW8.PNG)
+### **Task 2.3:**
+- Now, you will see all the database's tables and views. Select the view we created for this lab called **`view_analytics`** on the first step of the Analytics Lab. Drag and Drop that view to the main canvas of OAC dashboard.
 
   4. Now, you will see all the database's tables and views. Select the view we created for this lab called  **myAnalyticsView** on the first step of the Analytics Lab. Drag and Drop that view to the main canvas of OAC dashboard.
 
     ![](./images/RW9.PNG)
 
     ![](./images/RW10.PNG)
+ Save the Data Set on the top left corner of the page where you can see Untitled Dat Set. Call it **`view_analytics`** and then click **OK**.
 
  5. Save the Data Set on the top left corner of the page where you can see Untitled Dat Set. Call it **myAnalyticsView** and then click **OK**.
 
     ![](./images/task2.3.png)
+ To view the dataset click on the **`view_analytics`** tab at the bottom.
 
  6. To view the dataset click on the **myAnalyticsView** tab at the bottom.
 
@@ -134,13 +150,14 @@ Your Oracle Analytics Instance is now connected to your MySQL Database Service p
 
     ![](./images/task2.4.png)
 
-9. From the left side of the dashboard, select the column **`N_NAME`**, and then while pressing CTRL (or Command if you are on Mac) click
-  
-   **`O_TOTALPRICE`**, and right click and select **Create Best Visualization**.
+### **Task 2.5:** 
+
+- From the left side of the dashbaord, select the column **`passenger_id`**, and then while pressing CTRL (or Comamnd if you are on Mac) click
+  **`country`**, and right click and select _**Create Best Visualization**_.
 
     ![](./images/RW12.PNG)
 
-  A Bar Chart will appear after few seconds and we will see that every country contributes approximately equally to the company's revenues.
+ A Bar Chart will appear after few seconds and we will see how every country contributes approximately equally to the company's revenues.
 
     ![](./images/RW13.PNG)
 
@@ -156,7 +173,9 @@ Your Oracle Analytics Instance is now connected to your MySQL Database Service p
 
     ![](./images/task2.5.png)
 
-12. Our new map appears on the screen. Now let’s analyze the trend of prices by time. On the Explorer pane on the left, expand the column **`O_ORDERDATE`**, then click on Year, hold CTRL and click on **`O_TOTALPRICE`**. Right-click and choose **Create Best Visualization**.
+ Our new map appears on the screen. Now let’s analyze the trend of prices by time. On the Explorer pane on the left, expand the column **`Month the Year`**, 
+ 
+ then click on Year, hold CTRL and click on **`price`**. Right-click and choose _**Create Best Visualization**_.
 
     ![](./images/maps3.png)
 
@@ -175,7 +194,8 @@ Your Oracle Analytics Instance is now connected to your MySQL Database Service p
 
   You can see the name of the Project on the top left corner of the dashboard.
 
-    ![](./images/task2.5-2.png)
+![](./images/task2.5-2.png)
+![](./images/new.png)
 
   You can also share your project by email or social media. Have a look at the possibilities.
 
