@@ -172,7 +172,7 @@ Click on the _**airportdb**_ database in the left side of the dashboard.
 
     ![](./images/task2.5.png)
 
- Our new map appears on the screen. Now let’s analyze the trend of prices by time. On the Explorer pane on the left, expand the column **`Month the Year`**, then click on Year, hold CTRL and click on **`price`**. Right-click and choose _**Create Best Visualization**_.
+ Our new map appears on the screen. Now let’s analyze the trend of prices by time. On the Explorer panel on the left, expand the column **`Month the Year`**, then click on Year, hold CTRL and click on **`price`**. Right-click and choose _**Create Best Visualization**_.
 
     ![](./images/maps3.png)
 
