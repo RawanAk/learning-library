@@ -115,7 +115,7 @@ Once done, click **Create**.
     ![](./images/task2.5.png)
 
 
-## Task 3: Connect to the bastion host, install MySQL Shell and download the workshop dataset
+## **Task 3:** Connect to the Bastion Host, install MySQL Shell and download the workshop Dataset
 
 1. In order to connect to the bastion host, we will use the cloud shell, a small linux terminal embedded in the OCI interface.
 To access cloud shell, click on the shell icon next to the name of the OCI region, on the top right corner of the page.
