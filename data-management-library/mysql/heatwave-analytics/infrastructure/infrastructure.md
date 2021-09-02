@@ -352,7 +352,7 @@ Once done, click the _**Create**_ button.
 ![](./images/task5.8-1.png)
 
 
-As a recap we have created a VCN and added an additional Ingress rules to the Security list, and created a compute instance that serves as a bastion host and launched the cloud shell to import the private keys to connect to the compute instance, we also installed MySQL Shell the MySQL client, and downloaded the dataset that will be used later on for benchmark analysis.
+As a recap we have created a VCN and added an additional Ingress rules to the Security list, and created a compute instance that serves as a bastion host and launched the cloud shell to import the private keys to connect to the compute instance, we also installed MySQL Shell and MySQL client, and downloaded the dataset that will be used later on for benchmark analysis.
 Also, we created an Oracle Analytics Cloud instance which we will eventually use later in this workshop. Finally, created MySQL Database instance which will be used to enable the HeatWave service later.
 
 Well done, you can now proceed to the next lab!
