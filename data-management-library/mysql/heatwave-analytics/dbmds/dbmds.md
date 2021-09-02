@@ -10,14 +10,14 @@ Estimated Lab Time: 15 minutes.
 
 ### Objectives
 
--  Add HeatWave cluster to MySQL Database Service
+-  Add HeatWave Cluster to MySQL Database Service
 -  Configure Private Access Channel - OAC
 
 ### Prerequisites
 
   - All previous labs have been successfully completed.
 
-## **Task 1:** Add HeatWave cluster to MySQL Database Service
+## **Task 1:** Add HeatWave Cluster to MySQL Database Service
 
 1. We will need to wait for the DB System which you have just created until its status turns  **Active**, it would takes around 10 minutes.
 
