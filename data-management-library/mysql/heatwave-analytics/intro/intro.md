@@ -10,7 +10,7 @@ HeatWave is a new, integrated, high-performance analytics engine for MySQL Datab
  
 At the end of the workshop you will be able to run some queries on a sample dataset loaded into MySQL Database Service and compare the execution times with and without HeatWave. Prepare yourself to be surprised! 
  
-Estimated Workshop Time: 100 minutes
+Estimated Workshop Time: 100 minutes.
 
 ### Objectives
 
@@ -36,4 +36,4 @@ Your account is ready? let's start learning!
 ## Acknowledgements
 - **Author** - Rawan Aboukoura - Technology Product Strategy Manager, Vittorio Cioe - MySQL Solution Engineer
 - **Contributors** - Priscila Iruela - Technology Product Strategy Director, Victor Martin - Technology Product Strategy Manager 
-- **Last Updated By/Date** - Rawan Aboukoura, August 2021
+- **Last Updated By/Date** -
