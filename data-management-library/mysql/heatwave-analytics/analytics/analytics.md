@@ -176,7 +176,7 @@ Click on the _**airportdb**_ database in the left side of the dashboard.
 
     ![](./images/maps3.png)
 
-![](./images/maps3-2.png)
+![](./images/maps3-1.png)
 
  A line chart will be created at the bottom. We see the historical trend and a drop in the latest year. It would be awesome to know if this drop was a one off, and the embedded Machine Learning within OAC can help you predict the future behavior. Right-click on the Line graphic and go to **Add Statistics --> Forecast**. 
 
