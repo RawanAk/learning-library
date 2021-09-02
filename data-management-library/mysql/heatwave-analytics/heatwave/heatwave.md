@@ -5,7 +5,7 @@
 
 HeatWave accelerates MySQL queries by 400X using massively parallel processing to provide real-time analytics. So in this lab we will run queries with HeatWave enabled and without and finally observe the results.
 
-Estimated Time: 20 minutes
+Estimated Lab Time: 20 minutes.
 
 ### Objectives
 -  Import data into MySQL Database Service and load tables to HeatWave
@@ -259,4 +259,4 @@ Well done, you can now proceed to the next lab!
 ## Acknowledgements
 - **Author** - Rawan Aboukoura - Technology Product Strategy Manager, Vittorio Cioe - MySQL Solution Engineer
 - **Contributors** - Priscila Iruela - Technology Product Strategy Director, Victor Martin - Technology Product Strategy Manager 
-- **Last Updated By/Date** - Kamryn Vinson, August 2021
+- **Last Updated By/Date** -
