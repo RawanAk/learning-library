@@ -53,8 +53,8 @@ Estimated Lab Time: 15 minutes
 
 ![](./images/task4.2.png)
 
-- click on the button _**Configure Private Access Channel**_ under the Private Access Channel section to create a private access to the MySQL Database Service Instance.
-- 
+- Click on the button _**Configure Private Access Channel**_ under the Private Access Channel section to create a private access to the MySQL Database Service Instance.
+
 ![](./images/task4.4.png)
 
 ### **Task 2.2:**
