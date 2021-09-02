@@ -14,12 +14,13 @@ Estimated Workshop Time: 100 minutes
 
 ### Objectives
 
--	Learn how to deploy MySQL Database Service (MDS) DB System with HeatWave.
--	Learn how to enable a HeatWave cluster to MDS DB System.
--	Learn how to import data into MDS from an external data source.
--	Understand how tables are loaded to HeatWave.
--	Learn how to run queries on MDS leveraging or not HeatWave.
--   Create your own Analytics dashboards on your MDS SB System.
+
+- Learn how to deploy MySQL Database Service (MDS) with HeatWave.
+- Learn how to enable a HeatWave cluster to MySQL Database Service.
+- Learn how to import data into MySQL Database Service from an external data source.
+- Understand how tables are loaded to HeatWave.
+- Learn how to run queries on MySQL Database Service leveraging or not HeatWave.
+- Create your own Analytics dashboards on your MySQL Database Service.
 
 
 ### Prerequisites
