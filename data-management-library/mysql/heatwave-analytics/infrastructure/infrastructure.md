@@ -12,6 +12,7 @@ Estimated Lab Time: 35 minutes
 -	Create a bastion host compute instance 
 -	Connect to the bastion host, install MySQL Shell and download the workshop dataset
 - Create an Oracle Analytics Cloud instance
+- Create an Instance of MySQL in the Cloud
 
 ### Prerequisites
 
@@ -258,7 +259,7 @@ In this task we will create an Oracle Analytics Cloud instance before we proceed
 
     ![](./images/task4.3-1.png)
 
-## **Task 5:** Create an Instance of MySQL in the Cloud
+## **Task 5:** Create MySQL Database
 
 ### **Task 5.1:**
 - From the main menu on the left select _**Databases >> DB Systems**_
@@ -345,7 +346,7 @@ Once done, click the _**Create**_ button.
 
 
 As a recap we have created a VCN and added an additional Ingress rules to the Security list, and created a compute instance that serves as a bastion host and launched the cloud shell to import the private keys to connect to the compute instance, we also installed MySQL Shell and MySQL client, and downloaded the dataset that will be used later on for benchmark analysis.
-Finally, we created an Oracle Analytics Cloud instance which we will eventually use later in this workshop.
+Also, we created an Oracle Analytics Cloud instance which we will eventually use later in this workshop. Finally, created MySQL Database instance which will be used to enable the HeatWave service later.
 
 Well done, you can now proceed to the next lab!
 

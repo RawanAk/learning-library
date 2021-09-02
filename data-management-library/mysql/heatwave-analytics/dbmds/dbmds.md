@@ -10,22 +10,26 @@ Estimated Lab Time: 15 minutes
 
 ### Objectives
 
--  Create an Instance of MySQL DB Systems
 -  Add HeatWave cluster to MySQL Database Service
+-  Configure Private Access Channel - OAC
 
 ### Prerequisites
 
   - All previous labs have been successfully completed.
 
-## **Task 2:** Add HeatWave cluster to MySQL Database Service
+## **Task 1:** Add HeatWave cluster to MySQL Database Service
 
 1. We will need to wait for the DB System which you have just created until its status turns  **Active**, it would takes around 10 minutes.
 
- Once it is active you can take note of the **Private IP Address** of the MySQL DB System which we will use later in the workshop.
+### **Task 1.1:**
+- We will need to wait for the DB System which you have just created until its status turns  _**Active**_, it would takes around 10 minutes.
+
+ Once it is active you can take note of the _**Private IP Address**_ of the MySQL DB System which we will use later in the workshop.
 
     ![](./images/task2.1.png)
 
-2. From the menu on the left bottom side select **HeatWave**, and click on the button **Add HeatWave Cluster** located on the right.
+### **Task 1.2:**
+- From the menu on the left bottom side select _**HeatWave**_, and click on the button _**Add HeatWave Cluster**_ located on the right.
   
     ![](./images/task2.2.png)
 
@@ -33,7 +37,8 @@ Estimated Lab Time: 15 minutes
 
     ![](./images/task2.2-1.png)
 
-3. You will be brought back to the main page where you can check for the creation status. After some seconds you should see the nodes in **Creating** status.
+### **Task 1.3:**
+- You will be brought back to the main page where you can check for the creation status. After some seconds you should see the nodes in _**Creating**_ status.
   
     ![](./images/task2.3.png)
 
