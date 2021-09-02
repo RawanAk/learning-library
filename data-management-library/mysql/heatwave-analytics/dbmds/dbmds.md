@@ -48,8 +48,13 @@ Estimated Lab Time: 15 minutes
 
 
 ### **Task 2.1:**
-- When the status of the instance changes to _Active_, click on the button _**Configure Private Access Channel**_ under the Private Access Channel section to create a private access to the MySQL Database Service Instance.
 
+- Back to the Analytics Cloud from _**hamburger menu**_ in the upper left corner and click on _**Analytics & AI -> Analytics Cloud**_ by now the status of the instance should have changed to _Active_. 
+
+![](./images/task4.2.png)
+
+- click on the button _**Configure Private Access Channel**_ under the Private Access Channel section to create a private access to the MySQL Database Service Instance.
+- 
 ![](./images/task4.4.png)
 
 ### **Task 2.2:**
@@ -59,7 +64,8 @@ Check _**Virtual Cloud Network's domain name as DNS zone**_, and remove the addi
 _**Note:**_ It will take up to _**50 minutes**_ to create the private channel so go ahead and proceed to the next Lab! 
 
 ![](./images/task4.5.png)
-As a recap, in this lab we have created a MySQL DB System node includes a HeatWave plugin that is responsible for cluster management, query scheduling, and returning query results to the MySQL DB System. 
+
+As a recap, in this lab we have enabled HeatWave cluster to MySQL Database Service, and configured Private Access Channel for the Oracle Analytics Cloud instance created in Lab 1. 
  
 Well done, you can now proceed to the next lab!
 

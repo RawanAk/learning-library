@@ -255,19 +255,19 @@ In this task we will create an Oracle Analytics Cloud instance before we proceed
     - OCPU: **2**
     - License Type: **License Included**
   
-  _**Note:** It takes about **15-20 minutes** to create the OAC instance._
+_**Note:**_ It takes about _**15-20 minutes**_ to create the OAC instance you can proceed to the next task until it is done.
 
     ![](./images/task4.3-1.png)
 
 ## **Task 5:** Create MySQL Database
 
 ### **Task 5.1:**
-- From the main menu on the left select _**Databases >> DB Systems**_
+- From the console main menu on the left side select _**Databases >> DB Systems**_
   
 ![](./images/task5.1.png)
 
 ### **Task 5.2:**
-- The previous Task will bring you to the DB System creation page. 
+- It will bring you to the DB System creation page. 
 Look at the compartment selector on the left and check that you are using the same compartment used to create the VCN and the Compute Instance. Once done, click on _**Create MySQL DB System**_.
 
 ![](./images/task5.2.png)
