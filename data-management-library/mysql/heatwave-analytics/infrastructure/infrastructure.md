@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab we will build the infrastructure that we will use to run the rest of the workshop. The main three elements that we will be creating are a Virtual Cloud Network which helps you define your own data centre network topology inside the Oracle Cloud by defining some of the following components (Subnets, Route Tables, Security Lists, Gateways, etc.), bastion host which is a compute instance that serves as the public entry point for accessing a private network from external networks like the internet, and finally we will create an Oracle Analytics Cloud instance which is embedded with machine learning, that helps organizations to discover unique insights faster with automation and intelligence.
+In this lab we will build the infrastructure that we will use to run the rest of the workshop. The main three elements that we will be creating are a Virtual Cloud Network which helps you define your own data centre network topology inside the Oracle Cloud by defining some of the following components (Subnets, Route Tables, Security Lists, Gateways, etc.), bastion host which is a compute instance that serves as the public entry point for accessing a private network from external networks like the internet, and we will create an Oracle Analytics Cloud instance which is embedded with machine learning, that helps organizations to discover unique insights faster with automation and intelligence. Finally, we will create a MySQL DB system instance that we will allow us to configure a heatwave cluster later. 
 
 Estimated Lab Time: 35 minutes
 
@@ -258,17 +258,90 @@ In this task we will create an Oracle Analytics Cloud instance before we proceed
 
     ![](./images/task4.3-1.png)
 
-4. When the status of the instance changes to _Active_, click on the button **Configure Private Access Channel** under the Private Access Channel section to create a private access to the MySQL Database Service Instance.
+## **Task 5:** Create an Instance of MySQL in the Cloud
 
-    ![](./images/task4.4.png)
+### **Task 5.1:**
+- From the main menu on the left select _**Databases >> DB Systems**_
+  
+![](./images/task5.1.png)
 
-5. In the next window you first need to fill the name for the channel **PrivateChannel**. Then, choose the VCN created earlier **`analytics_vcn_test`**, and make sure you select the correct subnet, **`Public Subnet-analytics_vcn_test`**, otherwise you won't be able to connect!
-Check **Virtual Cloud Network's domain name as DNS zone**, and remove the additional **DNS Zone**, using the X icon on the right side of the DNS Zone section, and finally click **Configure**.  
+### **Task 5.2:**
+- The previous Task will bring you to the DB System creation page. 
+Look at the compartment selector on the left and check that you are using the same compartment used to create the VCN and the Compute Instance. Once done, click on _**Create MySQL DB System**_.
 
-_**Note:**_ It will take up to _**50 minutes**_ to create the private channel so go ahead and proceed to the next Lab! 
+![](./images/task5.2.png)
 
-    ![](./images/task4.5.png)
+### **Task 5.3:**
+- Start creating the DB System. Cross check again the compartment and assign to the DB System the name:
+```
+<copy> mysql-analytics-test</copy>
+```
+ Select the HeatWave box, this will allow to create a MySQL DB System which will be HeatWave-ready. 
+  
+![](./images/task5.3.png)
 
+### **Task 5.4:**
+- In the _**Create Administrator Credential**_ section enter the following information:
+  
+```
+username: <copy>admin</copy>
+```
+```
+password: <copy>Oracle.123</copy>
+```
+- In the _**Configure Networking**_ section make sure you select the same VCN and subnet which you have used to create the Compute Instance _**`Public-Subnet-analytics_vcn_test(Regional)`**_.
+
+- Leave the default availability domain and proceed to the _**Configure Hardware**_ section.
+ 
+  ![](./images/task5.4.png)
+
+### **Task 5.5:**
+- Confirm that in the _**Configure Hardware**_ section, the selected shape is **MySQL.HeatWave.VM.Standard.E3**, CPU Core Count: **16**, Memory Size: **512 GB**, Data Storage Size: **1024**.
+In the _**Configure Backup**_ section leave the default backup window of **7** days.
+
+![](./images/task5.5.png)
+
+### **Task 5.6:**
+- To select a Configuration, scroll down and click on _**Show Advanced Options**_. 
+  
+![](./images/task5.6.png)
+
+
+- In the Configuration tab click on _**Select Configuration**_. 
+
+![](./images/task5.6-1.png)
+
+### **Task 5.7:**
+- In the _**Browse All Configurations**_ window, select **MySQL.HeatWave.VM.Standard.E3.Standalone**, and click the button _**Select a Configuration**_. 
+
+![](./images/task5.7.png)
+
+- If everything is correct you should see something corresponding to the below:
+
+![](./images/task5.7-1.png)
+
+### **Task 5.8:**
+- Go to the Networking tab, in the Hostname field enter (same as DB System Name):
+```
+<copy> mysql-analytics-test</copy> 
+```
+Check that port configuration corresponds to the following:
+
+
+MySQL Port: **3306**
+
+MySQL X Protocol Port: **33060**
+
+ 
+
+Once done, click the _**Create**_ button.
+
+![](./images/task5.8.png)
+
+
+- The MySQL DB System will have _**CREATING**_ state (as per picture below). 
+  
+![](./images/task5.8-1.png)
 
 
 As a recap we have created a VCN and added an additional Ingress rules to the Security list, and created a compute instance that serves as a bastion host and launched the cloud shell to import the private keys to connect to the compute instance, we also installed MySQL Shell and MySQL client, and downloaded the dataset that will be used later on for benchmark analysis.
