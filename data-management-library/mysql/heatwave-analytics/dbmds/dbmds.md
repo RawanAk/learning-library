@@ -6,7 +6,7 @@ In this lab we will enable the HeatWave cluster and configure a private access c
 The DB System and HeatWave cluster must use the same shape, the shape defines the number of CPU cores, the amount of RAM, and so on. The size of the HeatWave cluster needed depends on tables and columns required to load, and the compression achieved in memory for this data.
 By enabling HeatWave you will deploy a standalone DB System characterized by a HeatWave-compatible shape (MySQL.HeatWave.VM.Standard.E3) and 1TB of data storage that will accelerate processing of analytic queries. For more information, check **[HeatWave Documentation](https://docs.oracle.com/en-us/iaas/mysql-database/doc/heatwave1.html#GUID-9401C69A-B379-48EB-B96C-56462C23E4FD)**. 
 
-Estimated Lab Time: 15 minutes
+Estimated Lab Time: 15 minutes.
 
 ### Objectives
 
@@ -74,4 +74,4 @@ Well done, you can now proceed to the next lab!
 ## Acknowledgements
 - **Author** - Rawan Aboukoura - Technology Product Strategy Manager, Vittorio Cioe - MySQL Solution Engineer
 - **Contributors** - Priscila Iruela - Technology Product Strategy Director, Victor Martin - Technology Product Strategy Manager 
-- **Last Updated By/Date** - Kamryn Vinson, August 2021
+- **Last Updated By/Date** -
