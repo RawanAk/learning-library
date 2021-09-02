@@ -4,7 +4,7 @@
 
 In this lab we will use the Oracle Analytics Cloud instance we created in the Infrastructure lab. Oracle Analytics Cloud is embedded with machine learning that will provide you intelligent insights using natural language generation that automatically creates smart textual descriptions of visualizations and instantly visualize your data, which helps organizations with root cause investigation, troubleshooting and decision-making process.
 
-Estimated Time: 30 minutes
+Estimated Lab Time: 30 minutes.
 
 ### Objectives
 
