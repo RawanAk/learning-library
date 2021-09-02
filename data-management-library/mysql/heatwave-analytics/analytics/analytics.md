@@ -151,7 +151,7 @@ Click on the _**airportdb**_ database in the left side of the dashboard.
 
 ### **Task 2.5:** 
 
-- From the left side of the dashbaord, select the column **`passenger_id`**, and then while pressing CTRL (or Comamnd if you are on Mac) click
+- From the left side of the dashboard, select the column **`passenger_id`**, and then while pressing CTRL (or Comamnd if you are on Mac) click
   **`country`**, and right click and select _**Create Best Visualization**_.
 
     ![](./images/RW12.PNG)
