@@ -194,20 +194,6 @@ _**when prompted a warning about the public key type "y"**_
 ```
 ![](images/task3.6-1.png)
 
-- Launch MySQL Shell executing the following command:
-```
-<copy>mysqlsh</copy>
-```
-![](./images/task3.6.png)
-
-When you see the MySQL Shell colorful prompt, exit with the following command:
-```
-<copy>
-\q
-</copy>
-```
-
-
 ### **Task 3.6:**
 - Download the airportdb sample database that we will use for this workshop using the following commands:
 ```
