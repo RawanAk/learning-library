@@ -9,8 +9,8 @@ Estimated Lab Time: 35 minutes.
 ### Objectives
  
 -	Create a Virtual Cloud Network and allow traffic through MySQL Database Service port
--	Create a bastion host compute instance 
--	Connect to the bastion host, install MySQL Shell and download the workshop dataset
+-	Create a Bastion Host compute instance 
+-	Connect to the Bastion Host, install MySQL Shell and download the workshop Dataset
 - Create an Oracle Analytics Cloud instance
 - Create an Instance of MySQL in the Cloud
 
@@ -103,8 +103,8 @@ At the end click the blue button _**Add Ingress Rules**_.
   
     ![](./images/task2.3-1.png)
 
-
-5. Scroll down and MAKE SURE TO DOWNLOAD the proposed private key. 
+### **Task 2.4:** 
+- Scroll down and MAKE SURE TO DOWNLOAD the proposed private key. 
 You will use it to connect to the compute instance later on.
 Once done, click **Create**.
 
