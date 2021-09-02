@@ -171,15 +171,15 @@ Now that you have connected to the instance you can proceed to the next Task.
 ```
 
 ```
-<copy>sudo yum localinstall mysql80-community-release-el7-3.noarch.rpm</copy>
+<copy> sudo yum localinstall -y mysql80-community-release-el7-3.noarch.rpm</copy>
 ```
 
 ```
-<copy>sudo yum install mysql-shell</copy>  
+<copy> sudo yum install -y mysql-shell</copy>  
 ```
 
 ```
-<copy>sudo yum install mysql-community-client</copy>
+<copy> sudo yum install -y mysql-community-client</copy>
 ```
 _**when prompted a warning about the public key type "y"**_
 ![](./images/task3.5.png)
@@ -200,6 +200,13 @@ _**when prompted a warning about the public key type "y"**_
 ```
 ![](./images/task3.6.png)
 
+When you see the MySQL Shell colorful prompt, exit with the following command:
+```
+<copy>
+\q
+</copy>
+```
+
 
 ### **Task 3.6:**
 - Download the airportdb sample database that we will use for this workshop using the following commands:
@@ -208,7 +215,7 @@ _**when prompted a warning about the public key type "y"**_
 cd /home/opc
 </copy>
 ```
-_Note:_ It takes around 15-20 minutes to finish, you can proceed to the next Task until it is done downloading.
+_Note:_ It takes around 15-20 minutes to finish, you can proceed to the next task until it is done downloading.
 ```
 <copy>wget https://downloads.mysql.com/docs/airport-db.zip</copy>
 ```
@@ -345,7 +352,7 @@ Once done, click the _**Create**_ button.
 ![](./images/task5.8-1.png)
 
 
-As a recap we have created a VCN and added an additional Ingress rules to the Security list, and created a compute instance that serves as a bastion host and launched the cloud shell to import the private keys to connect to the compute instance, we also installed MySQL Shell and MySQL client, and downloaded the dataset that will be used later on for benchmark analysis.
+As a recap we have created a VCN and added an additional Ingress rules to the Security list, and created a compute instance that serves as a bastion host and launched the cloud shell to import the private keys to connect to the compute instance, we also installed MySQL Shell the MySQL client, and downloaded the dataset that will be used later on for benchmark analysis.
 Also, we created an Oracle Analytics Cloud instance which we will eventually use later in this workshop. Finally, created MySQL Database instance which will be used to enable the HeatWave service later.
 
 Well done, you can now proceed to the next lab!

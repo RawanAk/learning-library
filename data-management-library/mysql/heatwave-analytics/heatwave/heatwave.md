@@ -63,7 +63,7 @@ This command will commit a dry run of the import.
 
  If it terminates without errors, execute the following to load the dump for real:
 ```
-<copy>util.loadDump("/home/opc/airport-db", {dryRun: false, resetProgress:true, ignoreVersion:true})</copy>
+<copy> util.loadDump("/home/opc/airport-db", {dryRun: false, threads: 8, resetProgress:true, ignoreVersion:true})</copy>
 ```
 _Note:_ It takes around 5 minutes to finish.
 ![](./images/task1.2-1.png)
