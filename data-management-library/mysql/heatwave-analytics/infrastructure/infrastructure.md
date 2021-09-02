@@ -181,11 +181,12 @@ Now that you have connected to the instance you can proceed to the next Task.
 ```
 <copy> sudo yum install -y mysql-community-client</copy>
 ```
-_**when prompted a warning about the public key type "y"**_
+
 ![](./images/task3.5.png)
 ![](./images/task3.5-1.png)
 ![](./images/task3.5-2.png)
 ![](./images/task3.5-3.png)
+
 ### **Task 3.5:**
 
 - Check out the MySQL shell version
