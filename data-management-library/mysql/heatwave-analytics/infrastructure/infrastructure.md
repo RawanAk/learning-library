@@ -43,23 +43,28 @@ Estimated Lab Time: 35 minutes.
     ![](./images/task1.3.png)
 
 4. Select **VCN with Internet Connectivity** and click **Start VCN Wizard**.
+![VCN Creation](./images/task1.4.png)
 
     ![](./images/task1.4.png)
 
 5. Now you need to complete some information and set the configuration for the VCN. In the **VCN Name** field enter the value 
 **`analytics_vcn_test`** (or any name at your convenience), and make sure that the selected compartment is the right one. Leave all the rest as per default, Click **Next**.
+![VCN creation](./images/task1.5.png)
 
     ![](./images/task1.5.png)
 
 6. Review the information showed is correct and click **Create**.
+![VCN creation](./images/task1.6.png)
 
     ![](./images/task1.6.png)
 
 7. Once the VCN will be created click **View Virtual Cloud Network**.
+![VCN creation](./images/task1.7.png)
 
     ![](./images/task1.7.png)
 
 8. Click on the **`Public_Subnet-analytics_vcn_test`**. 
+![VCN creation](./images/task1.8.png)
 
     ![](./images/task1.8.png)
 ### **Task 1.9:** 
@@ -68,10 +73,12 @@ Estimated Lab Time: 35 minutes.
 
 9. Earlier we set up the subnet to use the VCN's default security list, that has default rules, which are designed to make it easy to get started with Oracle Cloud Infrastructure. 
  Now we will customize the default security list of the VCN to allow traffic through MySQL Database Service ports by clicking on  **`Default_Security_List_for_analytics_vcn_test`**.
+![scurity list](./images/task1.9.png)
 
     ![](./images/task1.9.png)
 
 10. Click on **Add Ingress Rules**.
+![security list](./images/task1.10.png)
 
     ![](./images/task1.10.png)
 
@@ -87,7 +94,7 @@ Description:  <copy> MySQL Port </copy>
 ```
 At the end click the blue button _**Add Ingress Rules**_.
 
-  At the end click the blue button **Add Ingress Rules**.
+![security list](./images/task1.11.png)
 
   ![](./images/task1.11.png)
 
@@ -97,16 +104,16 @@ At the end click the blue button _**Add Ingress Rules**_.
 
 1. From the main menu on the top left corner select **Compute >> Instances**.
   
-    ![](./images/task2.1.png)
+![OCI Console](./images/task2.1.png)
 
 2. In the compartment selector on the bottom left corner, select the same compartment where you created the VCN. Click on the **Create Instance** blue button to create the compute instance.
 
-    ![](./images/task2.2.png)
+![Compute Instance](./images/task2.2.png)
 
 3. In the **Name** field, insert **mysql-analytics-test-bridge** (or any other name at your convenience). This name will be used also as internal FQDN. 
   The **Placement and Hardware section** is the section where you can change Availability Domain, Fault Domain, Image to be used, and Shape of resources. For the scope of this workshop leave everything as default.
 
-    ![](./images/task2.3.png)
+![COmpute Instance creation](./images/task2.3.png)
 
 
 4. As you scroll down you can see the **Networking** section, check that your previously created **VCN** is selected, and select your PUBLIC subnet **`Public Subnet-analytics_vcn_test(Regional)`** from the dropdown menu.
