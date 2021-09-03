@@ -64,8 +64,12 @@ This command will commit a dry run of the import.
 ```
 <copy> util.loadDump("/home/opc/airport-db", {dryRun: false, threads: 8, resetProgress:true, ignoreVersion:true})</copy>
 ```
-_Note:_ It takes around 3 minutes to finish.
+
 ![](./images/task1.2-1.png)
+
+_Note:_ It takes around 3 minutes to finish.
+
+![](./images/task1.2-2.png)
 
 ### **Task 1.3:**
 - Check the imported data. From MySQL Shell execute the commands:
@@ -244,7 +248,7 @@ LIMIT 10;
 </copy>
 ```
 
-- This time execution time should be about 1.5-1s!!
+- This second execution with HeatWave should be about 1.5-1s, try again the query!
 
 ![](./images/task2.3-1.png)
 
