@@ -258,7 +258,7 @@ _**Note:**_ It takes about _**15-20 minutes**_ to create the OAC instance you ca
 ## **Task 5:** Create MySQL Database
 
 ### **Task 5.1:**
-- From the console main menu on the left side select _**Databases >> DB Systems**_
+- From the console main menu on the left side select _**Databases >> DB Systems**_.
   
 ![](./images/task5.1.png)
 
