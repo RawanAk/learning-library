@@ -28,7 +28,7 @@ Estimated Lab Time: 30 minutes.
 ```
 <copy>mysqlsh --user=admin --password=Oracle.123 --host=<mysql_private_ip_address> --port=3306 --database=airportdb --sql</copy>
 ```
-![](./images/task1.1.png)
+![connect to mysql shell](./images/Lab4-task1.1.png)
 
 - Run the following query to create a virtual table **`view_analytics`** that will include data from other tables from the database:
 
@@ -52,33 +52,36 @@ FROM booking b
   LIMIT 200000;
 </copy>    
 ```
-![](./images/task1.1-1.png)
+![creating view analytics for OAC](./images/Lab4-task1.1-1.png)
 
 3. Now going back to the main page click on the **hamburger menu** in the upper left corner and click on **Analytics & AI -> Analytics Cloud**.
 
-    ![](./images/task1.2.png)
+![OCI Console](./images/Lab4-task1.2.png)
 
 4. By now the status of the instance should have changed to _Active_, click on the button **Analytics Home Page** to access Oracle Analytics Cloud.
 
-    ![](./images/task1.2-1.png)
+![OAC Active](./images/Lab4-task1.2-1.png)
 
 5. On the new tab, you can see the Oracle Analytics page where we will connect to MySQL Database Service, but before you can choose to preview the new Redwood look by pressing on **preview it**.
 
     ![](./images/task1.3.png)
 
-  ![](./images/task1.3.png)
+  ![Oracle Analytics dashboard](./images/Lab4-task1.3.png)
 
 - On the top right corner click _**Create**_, then click _**Connection**_.
   
-    ![](./images/RW2.PNG)
+![Oracle Analytics dashboard connection](./images/Lab4-task1.3-1)
 
 8. Browse the connection type or simply type in the search section **MySQL**, and Click it.
   
-    ![](./images/RW3.PNG)
+![Oracle Analytics dashboard connection creation](./images/Lab4-task1.4.PNG)
+
+In the new window we have a lot of information we need to provide. Host name is a little bit tricky, we need to provide the Internal FQDN (fully qualified domain name) of the MySQL Database Instance. To find this out, you need to go back to the MySQL instance details.
 
   In the new window we have a lot of information we need to provide. Host name is a little bit tricky, we need to provide the Internal FQDN (fully qualified domain name) of the MySQL Database Instance. To find this out, you need to go back to the MySQL instance details.
 
 9. Go to Databases section on your Cloud Home Page and select **DB Systems** and finally select **mysql-analytics-test** instance that we created previously and you will find all the information required such as **Internal FQDN** and **MySQL Port** in the _Endpoint section_.
+![MySQL DB system dashboard](./images/Lab4-task1.4-1.png) 
 
     ![](./images/task1.4.png) 
 
@@ -99,7 +102,7 @@ FROM booking b
   
   After you filled out the information, click **Save**.
 
-  ![](./images/RW4.PNG)
+![Oracle Analytics dashboard connection form](./images/Lab4-task1.5.png)
 
 Your Oracle Analytics Instance is now connected to your MySQL Database Service powered by HeatWave.
 
@@ -108,36 +111,39 @@ Your Oracle Analytics Instance is now connected to your MySQL Database Service p
 
 
 1. Let's now use this connection to create a very simple dashboard! From the top right corner click **Create** and this time click on **Data Set**.
+![Oracle Analytics dashboard creating data set](./images/Lab4-task2.1.png)
 
     ![](./images/RW5.PNG)
 
 2. From the new window select the connection we just created **MySQL_Connection.**
+![Oracle Analytics dashboard dataset connection](./images/Lab4-task2.2.png)
 
     ![](./images/RW6.PNG)
 Click on the _**airportdb**_ database in the left side of the dashboard.
 
-3. Click on the **tpch** database in the left side of the dashboard.
+![Oracle Analytics dashboard dataset](./images/Lab4-task2.2-1.png)
 
     ![](./images/RW7.PNG)
 
   **NOTE**: As a general note, keep in mind that you can use the Undo/Redo buttons at the top right of the screen if you make any mistake in this section.
+![undo button Oracle Analytics dashboard](./images/Lab4-task2.2-2.png)
 
     ![](./images/RW8.PNG)
 ### **Task 2.3:**
 - Now, you will see all the database's tables and views. Select the view we created for this lab called **`view_analytics`** on the first step of the Analytics Lab. Drag and Drop that view to the main canvas of OAC dashboard.
 
-  4. Now, you will see all the database's tables and views. Select the view we created for this lab called  **myAnalyticsView** on the first step of the Analytics Lab. Drag and Drop that view to the main canvas of OAC dashboard.
+![view analytics drag&drop Oracle Analytics dashboard](./images/Lab4-task2.3.png)
 
-    ![](./images/RW9.PNG)
+![Oracle Analytics dashboard view analytics](./images/Lab4-task2.3-1.png)
 
  Save the Data Set by click on the disk icon on the top right corner of the page, Call it **`view_analytics`** and then click **OK**.
 
- 5. Save the Data Set on the top left corner of the page where you can see Untitled Dat Set. Call it **myAnalyticsView** and then click **OK**.
+![Oracle Analytics dashboard save view](./images/Lab4-task2.3-2.png)
 
     ![](./images/task2.3.png)
  To view the dataset click on the **`view_analytics`** tab at the bottom.
 
- 6. To view the dataset click on the **myAnalyticsView** tab at the bottom.
+![view dataset Oracle Analytics dashboard](./images/Lab4-task2.3-3.png)
 
     ![](./images/RW11.PNG)
 
@@ -147,72 +153,72 @@ Click on the _**airportdb**_ database in the left side of the dashboard.
  
   If **Create Project** button is not activated, make sure you have saved the Data Set name as myAnalyticsView.
 
-    ![](./images/task2.4.png)
+![Oracle Analytics dashboard create project](./images/Lab4-task2.4.png)
 
 ### **Task 2.5:** 
 
 - From the left side of the dashboard, select the column **`passenger_id`**, and then while pressing CTRL (or Command if you are on Mac) click
   **`country`**, and right click and select _**Create Best Visualization**_.
 
-    ![](./images/RW12.PNG)
+![Oracle Analytics dashboard create best visualization](./images/Lab4-task2.5.png)
 
  A Bar Chart will appear after few seconds and we will see the distribution of the passengers over countries. 
 
-    ![](./images/RW13.PNG)
+![Oracle Analytics dashboard create best visualization](./images/Lab4-task2.5-1.png)
 
   As you can notice that the information is by country names, so a better way to visualize this data would be on a map. With OAC you can use maps without the need of complex geo-coding data, just out of the country names. Let's create that map.
  
 10. Right-click on the visualization and go to **Edit--> Duplicate Visualization**.
  
-    ![](./images/maps1.png)
+![Oracle Analytics dashboard create best visualization](./images/Lab4-task2.5-2.png)
 
 11. On the duplicated visual, click on **Visualization Type** and choose **Map**.
 
-    ![](./images/maps2.png)
+![Oracle Analytics dashboard create best visualization with map](./images/Lab4-task2.5-3.png)
 
-    ![](./images/task2.5.png)
+![Oracle Analytics dashboard create best visualization with map](./images/Lab4-task2.5-4.png)
 
  Our new map appears on the screen. Now let’s analyze the trend of prices by time. On the Explorer panel on the left, expand the column **`departure`** then click on **`Month of Year`**, hold CTRL and click on **`price`**. Right-click and choose _**Create Best Visualization**_.
 
-    ![](./images/maps3.png)
+![Oracle Analytics dashboard create best visualization query](./images/Lab4-task2.5-5.png)
 
-![](./images/maps3-1.png)
+![Oracle Analytics dashboard create best visualization query](./images/Lab4-task2.5-6.png)
 
  A line chart will be created at the bottom. We see the historical trend and a drop in the latest year. It would be awesome to know if this drop was a one off, and the embedded Machine Learning within OAC can help you predict the future behavior. Right-click on the Line graphic and go to **Add Statistics --> Forecast**. 
 
-    ![](images/maps4.png)
+![Oracle Analytics dashboard forcast pridiction](images/Lab4-task2.5-7.png)
 
  The visual now shows the forecasted **`price`** based on the Machine Learning applied to the data from the MySQL database. 
  It looks like we will recover from this drop.
 
-    ![](./images/maps5.png)
+![recover pridiction Oracle Analytics dashboard best visualization](./images/Lab4-task2.5-8.png)
 
  Finally, save the project by clicking on the Disk icon at the top right of the screen. Give it a name like **Departure Flights Revenue**.
 
-    ![](./images/task2.5-1.png)
+![save Oracle Analytics dashboard best visualization](./images/Lab4-task2.5-9.png)
 
   You can see the name of the Project on the top left corner of the dashboard.
 
-![](./images/task2.5-2.png)
+![save Oracle Analytics dashboard best visualization](./images/Lab4-task2.5-10.png)
 
 
   You can also share your project by email or social media. Have a look at the possibilities.
 
  Select the **Export** icon and select **File** or **Print**.
 
-    ![](./images/print1.png)
+![export Oracle Analytics dashboard best visualization](./images/Lab4-task2.6.png)
 
  You can choose to **Save** your project in a wide variety of standard formats such as PowerPoint (pptx), Acrobat (pdf), Image (png), Data (csv), Package (dva).  Also, you can choose which parts of your project to include, such as All Canvas, only the Active Canvas or the Active Visual. 
 
-    ![](./images/print2.png)
+![save Oracle Analytics dashboard best visualization](./images/Lab4-task2.6-1.png)
 
  The file will be downloaded locally on your machine.
 
-    ![](./images/task2.6.png)
+![download Oracle Analytics dashboard best visualization](./images/Lab4-task2.6-2.png)
 
  When you select **Print**, you can choose which parts of your project to include in the Printed output, such as All Canvas, only the Active Canvas or the Active Visual, etc.
 
-    ![](./images/print4.png)
+![print Oracle Analytics dashboard best visualization](./images/Lab4-task2.6-3.png)
 
 
 **Well done, Congratulations!** You now have all the tools to discover insights in your data!

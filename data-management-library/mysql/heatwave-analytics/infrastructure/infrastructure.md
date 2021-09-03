@@ -36,7 +36,7 @@ Estimated Lab Time: 35 minutes.
 ### **Task 1.3:** 
 - To create a virtual cloud network, click on _**Start VCN Wizard**_.
   
-![VCN Dashboard](./images/task1.3.png)
+![VCN Dashboard](./images/Lab1-task1.3.png)
 
 3. To create a virtual cloud network, click on **Start VCN Wizard**.
   
@@ -71,9 +71,7 @@ Estimated Lab Time: 35 minutes.
 - Earlier we set up the subnet to use the VCN's default security list, that has default rules, which are designed to make it easy to get started with Oracle Cloud Infrastructure. 
  Now we will customize the default security list of the VCN to allow traffic through MySQL Database Service ports by clicking on  _**`Security List for Private Subnet-analytics_vcn_test`**_.
 
-9. Earlier we set up the subnet to use the VCN's default security list, that has default rules, which are designed to make it easy to get started with Oracle Cloud Infrastructure. 
- Now we will customize the default security list of the VCN to allow traffic through MySQL Database Service ports by clicking on  **`Default_Security_List_for_analytics_vcn_test`**.
-![scurity list](./images/task1.9.png)
+![scurity list](./images/Lab1-task1.9.png)
 
     ![](./images/task1.9.png)
 
@@ -94,7 +92,7 @@ Description:  <copy> MySQL Port </copy>
 ```
 At the end click the blue button _**Add Ingress Rules**_.
 
-![security list](./images/task1.11.png)
+![security list](./images/Lab1-task1.11.png)
 
   ![](./images/task1.11.png)
 
@@ -104,32 +102,32 @@ At the end click the blue button _**Add Ingress Rules**_.
 
 1. From the main menu on the top left corner select **Compute >> Instances**.
   
-![OCI Console](./images/task2.1.png)
+![OCI Console](./images/Lab1-task2.1.png)
 
 2. In the compartment selector on the bottom left corner, select the same compartment where you created the VCN. Click on the **Create Instance** blue button to create the compute instance.
 
-![Compute Instance](./images/task2.2.png)
+![Compute Instance Dashboard](./images/Lab1-task2.2.png)
 
 3. In the **Name** field, insert **mysql-analytics-test-bridge** (or any other name at your convenience). This name will be used also as internal FQDN. 
   The **Placement and Hardware section** is the section where you can change Availability Domain, Fault Domain, Image to be used, and Shape of resources. For the scope of this workshop leave everything as default.
 
-![COmpute Instance creation](./images/task2.3.png)
+![Compute Instance creation](./images/Lab1-task2.3.png)
 
 
 4. As you scroll down you can see the **Networking** section, check that your previously created **VCN** is selected, and select your PUBLIC subnet **`Public Subnet-analytics_vcn_test(Regional)`** from the dropdown menu.
   
-    ![](./images/task2.3-1.png)
+![Compute instance creation](./images/Lab1-task2.3-1.png)
 
 ### **Task 2.4:** 
 - Scroll down and MAKE SURE TO DOWNLOAD the proposed private key. 
 You will use it to connect to the compute instance later on.
 Once done, click **Create**.
 
-    ![](./images/task2.4.png)
+![Compute instance craetion](./images/Lab1-task2.4.png)
 
 6. Once the compute instance will be up and running, you will see the square icon on the left turning green. However, you can proceed to the next **Task** until the provisioning is done.
   
-    ![](./images/task2.5.png)
+![compute instance creation](./images/Lab1-task2.5.png)
 
 
 ## **Task 3:** Connect to the Bastion Host, install MySQL Shell and download the workshop Dataset
@@ -137,31 +135,28 @@ Once done, click **Create**.
 1. In order to connect to the bastion host, we will use the cloud shell, a small linux terminal embedded in the OCI interface.
 To access cloud shell, click on the shell icon next to the name of the OCI region, on the top right corner of the page.
 
-    ![](./images/task3.1.png)
+![Cloud shell](./images/Lab1-task3.1.png)
 
 
 - Once the cloud shell is opened, you will see the command line:
   
-    ![](./images/task3.2.png)
+![Cloud Shell](./images/Lab1-task3.1-1.png)
 
 ### **Task 3.2:**
 - Drag and drop the previously saved private key into the cloud shell.   
 
-![](./images/task3.3.png)
+![Cloud Shell Darg&Drop Private key](./images/Lab1-task3.2.png)
 
 - You can verify the key file name with the following command:
   ```
   <copy>ll</copy>
   ```
-  
-    ![](./images/task3.3.png)
-
-    ![](./images/task3.3-1.png)
+![](./images/Lab1-task3.2-1.png)
 
 ### **Task 3.3:**
 - Copy the _**Public IP Address**_ of the compute instance you have just created.
 
-    ![](./images/task3.4.png)
+![Compute Instance Ip Address](./images/Lab1-task3.3.png)
 
 5. In order to establish an ssh connection with the bastion host using the Public IP, execute the following commands:
     ```
@@ -170,12 +165,12 @@ To access cloud shell, click on the shell icon next to the name of the OCI regio
     </copy>
     ```
 
-    ```
-    <copy>
-    ssh -i <private-key-file-name>.key opc@<compute_instance_public_ip>
-    </copy>
-    ```
-    ![](./images/task3.4-1.png)
+```
+<copy>
+ssh -i <private-key-file-name>.key opc@<compute_instance_public_ip>
+</copy>
+```
+![connect to compute instance](./images/Lab1-task3.3-1.png)
 
   If prompted to accept the finger print, type **yes** and hit enter, then you will get a Warning.
 
@@ -190,18 +185,18 @@ Now that you have connected to the instance you can proceed to the next Task.
 <copy>wget https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm</copy>
 ```
 
-![](./images/task3.5.png)
+![MySQL shell install](./images/Lab1-task3.4.png)
 
 ```
 <copy>sudo yum localinstall -y mysql80-community-release-el7-3.noarch.rpm</copy>
 ```
 
-![](./images/task3.5-1.png)
+![MySQL shell install](./images/Lab1-task3.4-1.png)
 
 ```
 <copy>sudo yum install -y mysql-shell mysql-community-client</copy>  
 ```
-![](./images/task3.5-2.png)
+![MySQL shell install](./images/Lab1-task3.4-2.png)
 
 ### **Task 3.5:**
 
@@ -209,7 +204,7 @@ Now that you have connected to the instance you can proceed to the next Task.
 ```
 <copy>mysqlsh --version</copy>
 ```
-![](images/task3.6-1.png)
+![MySQL version](images/Lab1-task3.5.png)
 
 ### **Task 3.6:**
 - Download the airportdb sample database that we will use for this workshop using the following commands:
@@ -223,7 +218,7 @@ cd /home/opc
 <copy>wget -O airport-db.zip https://bit.ly/3zLorXQ</copy>
 ```
 
-![](./images/task3.7-2.png)
+![database sample download](./images/Lab1-task3.6-2.png)
 
 
 ## Task 4: Create an Oracle Analytics Cloud instance
@@ -236,7 +231,7 @@ In this task we will create an Oracle Analytics Cloud instance before we proceed
 
  Then you are **connected** as a **Single Sign On** user.
 
-    ![](./images/FU1.png)
+![Federated User](./images/Lab1-task4.1.png)
 
   If your username is shown as:
 
@@ -246,7 +241,7 @@ In this task we will create an Oracle Analytics Cloud instance before we proceed
 
   If your user does not contain the identity provider (**oracleidentitycloudprovider**), please logout and select to authenticate using **Single Sign On**.
 
-    ![](./images/FU3.png)
+![Federated User](./images/Lab1-task4.1-1.png)
 
   To be capable of using **Oracle Analytics Cloud** we need to be Sign-On as a **Single Sign-On** (SSO) user.
 
@@ -254,12 +249,12 @@ In this task we will create an Oracle Analytics Cloud instance before we proceed
 
 2. Now going back to main page click the **hamburger menu** in the upper left corner and click on **Analytics & AI -> Analytics Cloud**.
 
-    ![](./images/task4.2.png)
+![OCI Console](./images/Lab1-task4.2.png)
 
 
 3. Click **Create instance** and in the new window, fill out the fields as shown in the image below. Make sure to select 2 OCPUs, the Enterprise version and the **License Included** button. Finally click **Create** to start the provisioning of the instance.
 
-    ![](./images/task4.3.png)
+![Analytics Creation](./images/Lab1-task4.3.png)
 
     - Name: **OACDemo**
     - OCPU: **2**
@@ -267,20 +262,20 @@ In this task we will create an Oracle Analytics Cloud instance before we proceed
   
 _**Note:**_ It takes about _**15-20 minutes**_ to create the OAC instance you can proceed to the next task until it is done.
 
-    ![](./images/task4.3-1.png)
+![Analytics Creation](./images/Lab1-task4.3-1.png)
 
 ## **Task 5:** Create MySQL Database
 
 ### **Task 5.1:**
 - From the console main menu on the left side select _**Databases >> DB Systems**_.
   
-![](./images/task5.1.png)
+![OCI Console](./images/Lab1-task5.1.png)
 
 ### **Task 5.2:**
 - It will bring you to the DB System creation page. 
 Look at the compartment selector on the left and check that you are using the same compartment used to create the VCN and the Compute Instance. Once done, click on _**Create MySQL DB System**_.
 
-![](./images/task5.2.png)
+![MySQL DB System creation](./images/Lab1-task5.2.png)
 
 ### **Task 5.3:**
 - Start creating the DB System. Cross check again the compartment and assign to the DB System the name:
@@ -289,7 +284,7 @@ Look at the compartment selector on the left and check that you are using the sa
 ```
  Select the HeatWave box, this will allow to create a MySQL DB System which will be HeatWave-ready. 
   
-![](./images/task5.3.png)
+![MySQL DB System](./images/Lab1-task5.3.png)
 
 ### **Task 5.4:**
 - In the _**Create Administrator Credential**_ section enter the following information:
@@ -304,19 +299,19 @@ password: <copy>Oracle.123</copy>
 
 - Leave the default availability domain and proceed to the _**Configure Hardware**_ section.
  
-  ![](./images/task5.4.png)
+  ![Configure hardware MySQL DB System craetion](./images/Lab1-task5.4.png)
 
 ### **Task 5.5:**
 - Confirm that in the _**Configure Hardware**_ section, the selected shape is **MySQL.HeatWave.VM.Standard.E3**, CPU Core Count: **16**, Memory Size: **512 GB**, Data Storage Size: **1024**.
 In the _**Configure Backup**_ section leave the default backup window of **7** days.
 
-![](./images/task5.5.png)
+![MySQL DB system creation](./images/Lab1-task5.5.png)
 
 ### **Task 5.6:**
 
 - Scroll down and click on _**Show Advanced Options**_. 
   
-![](./images/task5.6.png)
+![Advanced option MySQL DB Syatem](./images/Lab1-task5.6.png)
 
 - Go to the Networking tab, in the Hostname field enter (same as DB System Name):
 ```
@@ -331,12 +326,12 @@ MySQL X Protocol Port: **33060**
 
 Once done, click the _**Create**_ button.
 
-![](./images/task5.8.png)
+![MySQL DB System Networking Configuration](./images/Lab1-task5.6-1.png)
 
 
 - The MySQL DB System will have _**CREATING**_ state (as per picture below). 
   
-![](./images/task5.8-1.png)
+![MySQL DB Syatem Creating](./images/Lab1-task5.6-2.png)
 
 
 As a recap we have created a VCN and added an additional Ingress rules to the Security list, and created a compute instance that serves as a bastion host and launched the cloud shell to import the private keys to connect to the compute instance, we also installed MySQL Shell and the MySQL client, and downloaded the dataset that will be used later on for benchmark analysis.

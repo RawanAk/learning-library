@@ -27,13 +27,13 @@ Estimated Lab Time: 20 minutes.
 <copy>ssh -i <private-key-file-name>.key opc@<compute_instance_public_ip></copy>
 ```
 
-![](./images/task1.1.png)
+![ssh connect](./images/Lab3-task1.1.png)
 
 - Unpack the airport database sample downloaded in Lab1-Task3.7:
 ```
 <copy>unzip airport-db.zip</copy>
 ```  
-![](./images/task1.1-2.png)
+![unpack database sample](./images/Lab3-task1.1-1.png)
 
 - After it is done extracting the files, verify the extracted material executing the following command:
 ```
@@ -42,13 +42,13 @@ Estimated Lab Time: 20 minutes.
 
 Among the output, you should see the following file names:
 
-![](./images/task1.1-3.png)
+![database files](./images/Lab3-task1.1-2.png)
 
 - Connect to MySQL DB System with MySQL Shell using MySQL DB private IP address, as the following command:
 ```
 <copy>mysqlsh --user=admin --password=Oracle.123 --host=<mysql_private_ip_address> --port=3306 --js</copy>
 ```
-![](./images/task1.1-1.png)
+![xonnect to mysql shell](./images/Lab3-task1.1-3.png)
 
 ### **Task 1.2:**
 
@@ -58,18 +58,18 @@ This command will commit a dry run of the import.
 ```
 <copy>util.loadDump("/home/opc/airport-db", {dryRun: true, resetProgress:true, ignoreVersion:true})</copy>
 ```
-![](./images/task1.2.png)
+![import db into mysql db system dry run](./images/Lab3-task1.2.png)
 
  If it terminates without errors, execute the following to load the dump for real:
 ```
 <copy> util.loadDump("/home/opc/airport-db", {dryRun: false, threads: 8, resetProgress:true, ignoreVersion:true})</copy>
 ```
 
-![](./images/task1.2-1.png)
+![import db into mysql](./images/Lab3-task1.2-1.png)
 
 _Note:_ It takes around 3 minutes to finish.
 
-![](./images/task1.2-2.png)
+![MySQL shell connect](./images/Lab3-task1.2-2.png)
 
 ### **Task 1.3:**
 - Check the imported data. From MySQL Shell execute the commands:
@@ -87,7 +87,7 @@ SHOW DATABASES;
 ```
 You should see the following output:
 
-![](./images/task1.3.png)
+![MySQL Database](./images/Lab3-task1.3.png)
 
 Continue with commands:
 ```
@@ -103,7 +103,7 @@ SHOW TABLES;
 ```
 You should see the following output:
 
-![](./images/task1.3-1.png)
+![Airport db tables](./images/Lab3-task1.3-1.png)
 
 ### **Task 1.4:**
 - Let's start testing a simple query but yet effective query, to find per-company average age of passengers from Germany, Spain and Greece.
@@ -128,22 +128,24 @@ airline.airlinename, avg_age
 LIMIT 10;
 </copy>
 ```
-![](./images/task1.4.png)
+![Query run for airportdb](./images/Lab3-task1.4.png)
 
 - Exit from MySQL Shell:
   
-    ```
-    <copy>
-    \exit
-    </copy>
-    ```
-    ![](./images/task1.4-1.png)
+```
+<copy>
+ \exit
+</copy>
+```
+![exit sql db](./images/Lab3-task1.4-1.png)
+
+## **Task 2:** Execute queries leveraging HeatWave
 
 ## Task 2: Execute queries leveraging HeatWave
 
 1. On the OCI console, check that HeatWave nodes are in **Active** status, go to **Databases >> DB Systems** and check under the HeatWave section.
   
-    ![](./images/task2.1.png)
+![OCI Console](./images/Lab3-task2.1.png)
 
 
 - If HeatWave nodes are in _**Active**_ status, you can run the following Auto Parallel Load command to load the airportdb tables into HeatWave, from your bastion host ssh connection, using the following command:
@@ -153,16 +155,12 @@ mysqlsh --user=admin --password=Oracle.123 --host=<mysql_private_ip_address> --p
 </copy>
 ```
 
-    ```
-    <copy>
-    mysqlsh --user=admin --password=Oracle.123 --host=<mysql_private_ip_address> --port=3306 --sql < tpch_offload.sql
-    </copy>
-    ```
+![connect to mysql shell](./images/Lab3-task2.1-1.png)
 
 ```
 <copy>CALL sys.heatwave_load(JSON_ARRAY('airportdb'), NULL);</copy>
 ```
-![](./images/task2.1-2.png)
+![load db into Heatwave](./images/Lab3-task2.1-2.png)
 
 - Let's verify that the tables are loaded in the HeatWave cluster, and the loaded tables have an AVAIL_RPDGSTABSTATE load status.
 ```
@@ -171,7 +169,7 @@ mysqlsh --user=admin --password=Oracle.123 --host=<mysql_private_ip_address> --p
 ```
 <copy>SELECT NAME, LOAD_STATUS FROM rpd_tables,rpd_table_id WHERE rpd_tables.ID = rpd_table_id.ID;</copy>
 ```
-![](./images/task2.1-3.png)
+![Performance schema tables](./images/Lab3-task2.1-3.png)
 
 ### **Task 2.2:**
 
@@ -183,7 +181,7 @@ Change to the airport database. Enter the following command at the prompt:
 USE airportdb;
 </copy>
 ```
-![](./images/task2.2.png)
+![connect to airportdb](./images/Lab3-task2.2.png)
 
 - Now let's enable _**HeatWave**_  and let the Magic begin:
 ```
@@ -191,13 +189,13 @@ USE airportdb;
 set @@use_secondary_engine=ON;
 </copy>
 ```
-![](./images/task2.2-1.png)
+![enable secondary engine](./images/Lab3-task2.2-1.png)
 
 - To verify if `use_secondary_engine` is enabled (ON), enter the following command at the prompt: 
 ```
 <copy>SHOW VARIABLES LIKE 'use_secondary_engine%';</copy>
 ```
-![](./images/task2.2-2.png)
+![verification engine enabled](./images/Lab3-task2.2-2.png)
 
 ### **Task 2.3:**
 
@@ -224,7 +222,7 @@ LIMIT 10;
 ```
 You should see a message "Using secondary engine RAPID" in the **Extra** output
 
-![](./images/task2.3.png)
+![run query explain](./images/Lab3-task2.3.png)
 
 - Re-run the previous query and check the execution time again:
 ```
@@ -250,7 +248,7 @@ LIMIT 10;
 
 - This second execution with HeatWave should be about 1.5-1s, try again the query!
 
-![](./images/task2.3-1.png)
+![run heatwave query](./images/Lab3-task2.3-1.png)
 
 - Exit MySQL Shell
 
