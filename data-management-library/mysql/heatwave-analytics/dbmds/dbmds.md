@@ -1,4 +1,4 @@
-# Create MySQL DB Service (MDS) with HeatWave 
+# Lab 2: Enable HeatWave & Configure Private Access Channel
 
 ## Introduction
 
@@ -10,7 +10,7 @@ Estimated Lab Time: 15 minutes.
 
 ### Objectives
 
--  Add HeatWave Cluster to MySQL Database Service
+-  Enable HeatWave Cluster to MySQL Database Service
 -  Configure Private Access Channel - OAC
 
 ### Prerequisites
