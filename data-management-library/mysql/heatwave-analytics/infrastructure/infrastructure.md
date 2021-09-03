@@ -22,6 +22,7 @@ Estimated Lab Time: 35 minutes.
 ## Task 1: Create a Virtual Cloud Network and allow traffic through MySQL Database Service port
 
 1. Log-in to your OCI tenancy. Once you have logged-in, select **Networking >> Virtual Cloud Networks** from the **menu icon** on the top left corner.
+![OCI Dashboard](./images/task1.1.png)
 
     ![](./images/task1.1.png)
 
@@ -30,6 +31,12 @@ Estimated Lab Time: 35 minutes.
   _Note: If you have not picked a compartment, you can pick the root compartment which was created by default when you created your tenancy (ie when you registered for the trial account). It is possible to create everything in the root compartment, but Oracle recommends that you create sub-compartments to help manage your resources more efficiently._
 
     ![](./images/task1.2.png)
+![VCN Dashboard](./images/task1.2.png)
+
+### **Task 1.3:** 
+- To create a virtual cloud network, click on _**Start VCN Wizard**_.
+  
+![VCN Dashboard](./images/task1.3.png)
 
 3. To create a virtual cloud network, click on **Start VCN Wizard**.
   
