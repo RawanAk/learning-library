@@ -89,7 +89,7 @@ FROM booking b
 
     - **Host**: Copy the information from Internal FQDN here. ex: mysql-analytics-test.@#$%^&*0.analyticsvcntes.oraclevcn.com
 
-    - **Port**: Copy the information from MySQL Port. It should be 3306.
+    - **Port**: Copy the information from MySQL Port. It should be _3306_
 
     - **Database Name**: _airportdb_
   
