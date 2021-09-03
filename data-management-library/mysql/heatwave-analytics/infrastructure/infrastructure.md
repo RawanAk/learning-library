@@ -286,7 +286,7 @@ username: <copy>admin</copy>
 ```
 password: <copy>Oracle.123</copy>
 ```
-- In the _**Configure Networking**_ section make sure you select the same VCN and subnet which you have used to create the Compute Instance _**`Private Subnet-analytics_vcn_test(Regional)`**_.
+- In the _**Configure Networking**_ section make sure you select the same VCN, _**`analytics_vcn_test`**_ and subnet which you have used to create the Compute Instance _**`Private Subnet-analytics_vcn_test(Regional)`**_.
 
 - Leave the default availability domain and proceed to the _**Configure Hardware**_ section.
  
