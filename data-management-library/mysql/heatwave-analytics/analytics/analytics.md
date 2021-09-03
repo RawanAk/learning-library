@@ -172,7 +172,7 @@ Click on the _**airportdb**_ database in the left side of the dashboard.
 
     ![](./images/task2.5.png)
 
- Our new map appears on the screen. Now let’s analyze the trend of prices by time. On the Explorer panel on the left, expand the column **`Month the Year`**, then click on Year, hold CTRL and click on **`price`**. Right-click and choose _**Create Best Visualization**_.
+ Our new map appears on the screen. Now let’s analyze the trend of prices by time. On the Explorer panel on the left, expand the column **`departure`** then click on **`Month of Year`**, hold CTRL and click on **`price`**. Right-click and choose _**Create Best Visualization**_.
 
     ![](./images/maps3.png)
 
@@ -198,11 +198,11 @@ Click on the _**airportdb**_ database in the left side of the dashboard.
 
   You can also share your project by email or social media. Have a look at the possibilities.
 
- 15. Select the **Share** icon and select **File** or **Print**.
+ Select the **Export** icon and select **File** or **Print**.
 
     ![](./images/print1.png)
 
- You can choose to Save your project in a wide variety of standard formats such as PowerPoint (pptx), Acrobat (pdf), Image (png), Data (csv), Package (dva).  Also, you can choose which parts of your project to include, such as All Canvas, only the Active Canvas or the Active Visual. 
+ You can choose to **Save** your project in a wide variety of standard formats such as PowerPoint (pptx), Acrobat (pdf), Image (png), Data (csv), Package (dva).  Also, you can choose which parts of your project to include, such as All Canvas, only the Active Canvas or the Active Visual. 
 
     ![](./images/print2.png)
 
@@ -213,7 +213,6 @@ Click on the _**airportdb**_ database in the left side of the dashboard.
  When you select **Print**, you can choose which parts of your project to include in the Printed output, such as All Canvas, only the Active Canvas or the Active Visual, etc.
 
     ![](./images/print4.png)
-
 
 
 **Well done, Congratulations!** You now have all the tools to discover insights in your data!
