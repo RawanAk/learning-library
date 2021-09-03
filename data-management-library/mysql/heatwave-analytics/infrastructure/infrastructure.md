@@ -170,26 +170,22 @@ Now that you have connected to the instance you can proceed to the next Task.
 <copy>wget https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm</copy>
 ```
 
-```
-<copy> sudo yum localinstall -y mysql80-community-release-el7-3.noarch.rpm</copy>
-```
-
-```
-<copy> sudo yum install -y mysql-shell</copy>  
-```
-
-```
-<copy> sudo yum install -y mysql-community-client</copy>
-```
-
 ![](./images/task3.5.png)
+
+```
+<copy>sudo yum localinstall -y mysql80-community-release-el7-3.noarch.rpm</copy>
+```
+
 ![](./images/task3.5-1.png)
+
+```
+<copy>sudo yum install -y mysql-shell mysql-community-client</copy>  
+```
 ![](./images/task3.5-2.png)
-![](./images/task3.5-3.png)
 
 ### **Task 3.5:**
 
-- Check out the MySQL shell version
+- Confirm that MySQL Shell is installed by printing its version.
 ```
 <copy>mysqlsh --version</copy>
 ```
@@ -202,9 +198,9 @@ Now that you have connected to the instance you can proceed to the next Task.
 cd /home/opc
 </copy>
 ```
-_Note:_ It takes around 15-20 minutes to finish, you can proceed to the next task until it is done downloading.
+
 ```
-<copy>wget https://downloads.mysql.com/docs/airport-db.zip</copy>
+<copy>wget -O airport-db.zip https://bit.ly/3zLorXQ</copy>
 ```
 
 ![](./images/task3.7-2.png)
