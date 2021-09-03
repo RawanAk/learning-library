@@ -3,7 +3,7 @@
    
 ## Introduction
 
-HeatWave accelerates MySQL queries by 400X using massively parallel processing to provide real-time analytics. So in this lab we will run queries with HeatWave enabled and without and finally observe the results.
+HeatWave accelerates MySQL queries by 400x using massively parallel processing to provide real-time analytics. So in this lab we will run queries with HeatWave enabled and without and finally observe the results.
 
 Estimated Lab Time: 20 minutes.
 
