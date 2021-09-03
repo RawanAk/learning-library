@@ -64,7 +64,7 @@ This command will commit a dry run of the import.
 ```
 <copy> util.loadDump("/home/opc/airport-db", {dryRun: false, threads: 8, resetProgress:true, ignoreVersion:true})</copy>
 ```
-_Note:_ It takes around 5 minutes to finish.
+_Note:_ It takes around 3 minutes to finish.
 ![](./images/task1.2-1.png)
 
 ### **Task 1.3:**
@@ -244,12 +244,19 @@ LIMIT 10;
 </copy>
 ```
 
-- This time execution time should be about 0.2-0.05s!!
+- This time execution time should be about 1.5-1s!!
 
 ![](./images/task2.3-1.png)
 
+- Exit MySQL Shell
 
-As we observe the execution time obtained using HeatWave and without, such as the first query using HeatWave it took approximately 0.1 sec in comparison with 12 sec that the query took to process which is relatively much longer than when a HeatWave cluster is enabled. 
+```
+<copy>
+ \exit
+</copy>
+```
+
+As we observe the execution time obtained using HeatWave and without, such as the first query using HeatWave it took approximately 1 sec in comparison with 12 sec that the query took to process which is relatively much longer than when a HeatWave cluster is enabled. 
 
 Well done, you can now proceed to the next lab!
 

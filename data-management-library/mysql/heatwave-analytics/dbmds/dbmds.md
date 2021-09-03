@@ -42,7 +42,7 @@ Estimated Lab Time: 15 minutes.
   
     ![](./images/task2.3.png)
 
-  After completion, the node status will switch to **Active** status. The process will take some time to be completed. 
+- After completion, the node status will switch to _**Active**_ status. The process will take some time to be completed. You can go to the next Task in the meantime. 
 
 ## **Task 2:** Configure Private Access Channel - OAC
 
@@ -52,6 +52,8 @@ Estimated Lab Time: 15 minutes.
 - Back to the Analytics Cloud from _**hamburger menu**_ in the upper left corner and click on _**Analytics & AI -> Analytics Cloud**_ by now the status of the instance should have changed to _Active_. 
 
 ![](./images/task4.2.png)
+
+- Click on the instance _**OACDemo**_ to go to the details page.
 
 - Click on the button _**Configure Private Access Channel**_ under the Private Access Channel section to create a private access to the MySQL Database Service Instance.
 

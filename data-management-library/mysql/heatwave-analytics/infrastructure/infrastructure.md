@@ -55,6 +55,9 @@ Estimated Lab Time: 35 minutes.
 8. Click on the **`Public_Subnet-analytics_vcn_test`**. 
 
     ![](./images/task1.8.png)
+### **Task 1.9:** 
+- Earlier we set up the subnet to use the VCN's default security list, that has default rules, which are designed to make it easy to get started with Oracle Cloud Infrastructure. 
+ Now we will customize the default security list of the VCN to allow traffic through MySQL Database Service ports by clicking on  _**`Security List for Private Subnet-analytics_vcn_test`**_.
 
 9. Earlier we set up the subnet to use the VCN's default security list, that has default rules, which are designed to make it easy to get started with Oracle Cloud Infrastructure. 
  Now we will customize the default security list of the VCN to allow traffic through MySQL Database Service ports by clicking on  **`Default_Security_List_for_analytics_vcn_test`**.
@@ -70,7 +73,7 @@ Insert the details as below:
 Source CIDR:  <copy> 0.0.0.0/0 </copy>
 ```
 ```  
-Destination Port Range: <copy> 3306 </copy>
+Destination Port Range: <copy>3306,33060</copy>
 ```
 ```  
 Description:  <copy> MySQL Port </copy>
@@ -280,7 +283,7 @@ username: <copy>admin</copy>
 ```
 password: <copy>Oracle.123</copy>
 ```
-- In the _**Configure Networking**_ section make sure you select the same VCN and subnet which you have used to create the Compute Instance _**`Public-Subnet-analytics_vcn_test(Regional)`**_.
+- In the _**Configure Networking**_ section make sure you select the same VCN and subnet which you have used to create the Compute Instance _**`Private Subnet-analytics_vcn_test(Regional)`**_.
 
 - Leave the default availability domain and proceed to the _**Configure Hardware**_ section.
  
@@ -293,25 +296,11 @@ In the _**Configure Backup**_ section leave the default backup window of **7** d
 ![](./images/task5.5.png)
 
 ### **Task 5.6:**
-- To select a Configuration, scroll down and click on _**Show Advanced Options**_. 
+
+- Scroll down and click on _**Show Advanced Options**_. 
   
 ![](./images/task5.6.png)
 
-
-- In the Configuration tab click on _**Select Configuration**_. 
-
-![](./images/task5.6-1.png)
-
-### **Task 5.7:**
-- In the _**Browse All Configurations**_ window, select **MySQL.HeatWave.VM.Standard.E3.Standalone**, and click the button _**Select a Configuration**_. 
-
-![](./images/task5.7.png)
-
-- If everything is correct you should see something corresponding to the below:
-
-![](./images/task5.7-1.png)
-
-### **Task 5.8:**
 - Go to the Networking tab, in the Hostname field enter (same as DB System Name):
 ```
 <copy> mysql-analytics-test</copy> 
@@ -323,8 +312,6 @@ MySQL Port: **3306**
 
 MySQL X Protocol Port: **33060**
 
- 
-
 Once done, click the _**Create**_ button.
 
 ![](./images/task5.8.png)
@@ -335,7 +322,7 @@ Once done, click the _**Create**_ button.
 ![](./images/task5.8-1.png)
 
 
-As a recap we have created a VCN and added an additional Ingress rules to the Security list, and created a compute instance that serves as a bastion host and launched the cloud shell to import the private keys to connect to the compute instance, we also installed MySQL Shell and MySQL client, and downloaded the dataset that will be used later on for benchmark analysis.
+As a recap we have created a VCN and added an additional Ingress rules to the Security list, and created a compute instance that serves as a bastion host and launched the cloud shell to import the private keys to connect to the compute instance, we also installed MySQL Shell and the MySQL client, and downloaded the dataset that will be used later on for benchmark analysis.
 Also, we created an Oracle Analytics Cloud instance which we will eventually use later in this workshop. Finally, created MySQL Database instance which will be used to enable the HeatWave service later.
 
 Well done, you can now proceed to the next lab!
