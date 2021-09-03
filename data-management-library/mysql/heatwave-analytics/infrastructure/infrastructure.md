@@ -131,7 +131,11 @@ To access cloud shell, click on the shell icon next to the name of the OCI regio
     ![](./images/task3.2.png)
 
 ### **Task 3.2:**
-- Drag and drop the previously saved private key into the cloud shell. You can verify the key file name with the following command:
+- Drag and drop the previously saved private key into the cloud shell.   
+
+![](./images/task3.3.png)
+
+- You can verify the key file name with the following command:
   ```
   <copy>ll</copy>
   ```
@@ -139,7 +143,6 @@ To access cloud shell, click on the shell icon next to the name of the OCI regio
     ![](./images/task3.3.png)
 
     ![](./images/task3.3-1.png)
-
 
 ### **Task 3.3:**
 - Copy the _**Public IP Address**_ of the compute instance you have just created.
